@@ -1,0 +1,69 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Aires Flights</title>
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+		integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous" />
+</head>
+
+<body>
+
+	<nav class="navbar navbar-expand-lg navbar-dark " style="background-color: rebeccapurple;">
+		<a class="navbar-brand" href="#" style="font-family: Courier;">a i r e s </a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active">
+					
+				</li>
+
+			</ul>
+			<form class="form-inline my-2 my-lg-0">
+				<a class="btn btn-light my-2 my-sm-0 mr-1" style="background-color: rebeccapurple; color: white;" type="submit" href="/" >Back</a>
+				
+			</form>
+		</div>
+	</nav>
+	
+	<div class="container">
+
+		<h3 class="text-center" style="color: rebeccapurple; font-weight: bold;">Flight Schedule</h3>
+						
+
+		<hr />
+
+		<table class="table table-bordered table-striped">
+
+			<thead>
+				<tr>
+					<th>Flight Id</th>
+					<th>Departure</th>
+					<th>Destination</th>
+					<th>Time</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="employee: ${employees}">
+					<td th:text="${employee.id}" />
+					<td th:text="${employee.departure}" />
+					<td th:text="${employee.destination}" />
+					<td th:text="${employee.dob}" />
+				</tr>
+			</tbody>
+
+		</table>
+	</div>
+	
+	<div style="position: absolute;bottom: 0;left: 0; width: 100%; background-color: rebeccapurple;">
+  <p style="text-align: center;color: white;">© Copyright Agency and contributors 2022. ABN 53 001 228 799</p>
+  
+</div>
+
+</body>
+
+</html>
